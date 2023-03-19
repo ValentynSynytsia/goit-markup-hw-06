@@ -629,19 +629,16 @@ img {
 .form-input {
     width: 100%;
     height: 40px;
-    border: 1px solid var(--color-secondary);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    opacity: 0.2;
     padding: 0 0 0 38px;
     color: var(--color-secondary);
-    font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.01em;
     outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
     border: 1px solid var(--color-button-logo);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .form-input:focus + svg { 
     fill: var(--color-button-logo);
@@ -665,47 +662,42 @@ img {
     margin-bottom: 0.5em;
 }
 .check {
-    padding-left: 1.2em;
+    display: flex;
 }
 .form-input-checkbox {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    appearance: none;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-box {
-    position: absolute;
-    margin-top: 0.2em;
-    margin-left: -1em;
-    width: 0.6em;
-    height: 0.6em;
-    overflow: hidden;
-    border-radius: 0.05em;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    box-shadow: 0 0 0 0.1em var(--color-secondary);
-
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 16px;
     height: 16px;
-    margin-right: 8px;
-    color: #f4f4fd;
-    border: 1.25px solid var(--color-secondary);
+    overflow: hidden;
     border-radius: 2px;
-    cursor: pointer; */
+    cursor: pointer;
+    border-radius: 0.05em;
+    background-color: var(--color-light);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0 0 0 0.1em var(--color-secondary);
+    margin-right: 8px;
+    color: var(--color-button-logo-light);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input-checkbox:checked + .check-box {
     background-color: var(--color-button-action);
-    /* background-image: url('../images/#icon-check_mark'); */
     border-color: var(--color-button-action);
+    
+}
+.form-input-checkbox:checked + .check-box .check-box-icon{
+    fill: var(--color-button-logo-light);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-box-icon {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 8px;
     display: flex;
     fill: currentColor;
 }
@@ -721,7 +713,7 @@ img {
 }
 .send-button {
     position: absolute;
-    top: 480px;
+    top: 504px;
     left: 119px;
     background-color: var(--color-button-logo);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -734,7 +726,6 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    margin-top: 24px;
     padding: 16px 66px;
     width: 169px;
     height: 56px;    
@@ -759,8 +750,4 @@ img {
 .icon-mail {
     width: 15px;
     height: 12px;
-}
-.icon-check-mark {
-    width: 10px;
-    height: 8px;
 }
