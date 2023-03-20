@@ -435,12 +435,13 @@ img {
     fill: var(--color-button-logo-light);
 }
 /* Subscribe */
-.form-footer {
+.footer-subscribe {
     display: flex;
     flex-direction: column;
 }
-.form-footer-field {
+.form-footer {
     display: flex;
+    align-items: center;
 }
 .input-footer {
     width: 264px;
@@ -450,12 +451,13 @@ img {
     letter-spacing: 0.04em;
     color: var(--color-light);
     background-color: transparent;
-    border: 1px solid var(--color-light);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-footer::placeholder {
-    color: var(--color-light);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
 }
 .button-subscribe {
     display: flex;
