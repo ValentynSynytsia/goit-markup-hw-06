@@ -416,8 +416,24 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <form class="form-footer" name="form-footer">
+            <label class="social-media" for="user-email-subscribe">Subscribe</label>
+            <div class="form-footer-field">
+              <input
+                class="input-footer"
+                type="email"
+                name="user-email-subscribe"
+                id="user-email-subscribe"
+                placeholder="E-mail">
+              </input>
+              <button type="submit" class="button-subscribe">Subscribe<svg class="subscribe-icon"><use href="./images/icons.svg#icon-subscribe"></use></svg></button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
@@ -441,7 +457,6 @@
               type="text"
               name="user-name"
               id="user-name"
-              checked
             />
             <svg class="icon-man">
               <use href="./images/icons.svg#icon-man"></use>
@@ -472,7 +487,7 @@
             </svg>
           </div>
           <label class="form-label" for="user-message">Comment</label>
-          <div class="form-field form-field-comment">
+          <div class="form-field">
             <textarea
               class="form-input form-input-textarea"
               name="user-message"
